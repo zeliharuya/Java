@@ -8,13 +8,12 @@ public class day01_variables {
     public static void main(String[] args) {
 
         out.println("Hello world");
-    }
-    public static void main(String[] args) {
+    
         int number = 12;
         out.printIn(number) ;
         /* The Java system cannot identify an object without it being defined.
          */
-    }
+    
     /* There are 8 primitive data types: boolean, char, byte, int, short, long, float, and double
     boolean can only have true or false as a value without any additional symbols like ' '.
 
