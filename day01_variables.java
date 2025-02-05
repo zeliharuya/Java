@@ -1,3 +1,4 @@
+package day01_variables
 import static java.lang.System.*;
 
 public class day01_variables {
