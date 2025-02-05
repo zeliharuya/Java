@@ -11,7 +11,7 @@ public class day01_variables {
         System.out.println("Hello world");
     
         int number = 12;
-        out.printIn(number) ;
+        System.out.println(number) ;
         /* The Java system cannot identify an object without it being defined.
          */
     
