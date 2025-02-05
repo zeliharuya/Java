@@ -5,16 +5,17 @@ import java.util.Scanner;
 public class C10_CharYazdirma {
     public static void main(String[] args) {
 
-        // Soru 2- kullanicidan bir harf alin ve alfabede o harften sonraki 3 harfi yazdirin.
-
+        // Question 2 - Get a letter from the user and print the next three letters in the alphabet.
+        //ASCII table is used to clarify this question
         Scanner scan = new Scanner(System.in);
-        System.out.println("lütfen bir harf giriniz");
-        char girilenHarf=scan.next().charAt(0);
+        System.out.println("Please enter a letter:");
+        char enteredLetter = scan.next().charAt(0);
 
-        System.out.println("girilen harf: " +girilenHarf);
+        System.out.println("Entered letter: " + enteredLetter);
 
-        System.out.println("girilen harften bir sonraki harf: " +girilenHarf+1);
-        System.out.println("girilen harften iki sonraki harf: " +girilenHarf+2);
-        System.out.println("girilen harften üc sonraki harf: " +girilenHarf+3);
+        // Corrected output using type casting to char
+        System.out.println("The letter after the entered letter: " + (char) (enteredLetter + 1));
+        System.out.println("The letter two places after: " + (char) (enteredLetter + 2));
+        System.out.println("The letter three places after: " + (char) (enteredLetter + 3));
     }
 }
