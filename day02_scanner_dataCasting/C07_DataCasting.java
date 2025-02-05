@@ -2,44 +2,45 @@ package day02_scanner_dataCasting;
 
 public class C07_DataCasting {
     public static void main(String[] args) {
-        /* bir datayi baska data türündeki vRIblw'a atayabilmek icin data türü degistirmeye denir.
-        her data türü birbirine cevirilemez, örnegin boolean baska data türlerine cevrilemez ve baska data
-        türleri boolean'a cevrilemez.
-        Benzer data türleri ve parent-child iliskisi olan data türleri birbirlerine cevrilebilirler.
-        Ancak Java bu cevirmeleri bazen otomatik, bazen de bizden onay bekler
+        /* Data conversion refers to assigning data of one type to a variable of another type.
+           Not all data types can be converted to each other.
+           For example, a boolean cannot be converted to another data type, 
+           nor can other data types be converted to boolean.
 
-        Auto-widening (otomatik) dar kapsamli bir data türündeki datayi daha genis kapsamli bir data türüne
-        cevirmek isterek Java bunu otomatik olarak yapacaktir. örnegin double bir variable'a int, short
-        veya long datat türündeki bir deger atadigimizda java otomatik yapar.
+           Similar data types and those with a parent-child relationship can be converted to each other.
+           However, Java sometimes performs these conversions automatically, and other times it requires approval from the programmer.
 
-        explicit-narrowing: genis data türündeki datayi dar türüne cevirmek istersek, datat kayiplari
-        veya dönüsüm olabilir.
-         */
+           Auto-widening (automatic): 
+           When converting a smaller data type to a larger data type, 
+           Java performs the conversion automatically.
+           For example, assigning an int, short, or long value to a double variable is done automatically.
 
-        String isim="Esra";
+           Explicit-narrowing: 
+           When converting a larger data type to a smaller one, there can be data loss or transformation issues.
+        */
 
-        isim="Ayse";
+        String name = "Esra";
+        name = "Ayse";
 
-        //isim 's'; String br variable'a boolean, int veya char bir deger atayamazsiniz
+        // name = 's'; → A String variable cannot be assigned a boolean, int, or char value.
 
-        boolean iyiMi=true;
+        boolean isGood = true;
+        // isGood = 'r'; → A boolean variable cannot be assigned a String, char, or int value.
 
-        // iyiMi='r'; boolean data tründeki bir variable'a da String, char veya int atayamazsiniz
+        int intNumber = 12;
+        short shortNumber = 20;
+        byte byteNumber = 21;
+        double doubleNumber = 14;
 
-        int sayiInt= 12;
-        short sayiShort=20;
-        byte sayiByte=21;
-        double sayiDouble=14;
-        //ayni veya bezer datalar iceren variable'larda ise kontrollü gecis mümkündür.
+        // Controlled transitions are possible among similar or related data types.
 
-        sayiDouble = sayiInt; //b = k
-        sayiInt = sayiShort; // b = k
+        doubleNumber = intNumber;  // Small to large (Auto-widening)
+        intNumber = shortNumber;   // Small to large (Auto-widening)
 
-        sayiByte= (byte)sayiInt; //k = b
-        sayiShort = (short)sayiDouble; //k = b
+        byteNumber = (byte) intNumber;   // Large to small (Explicit-narrowing)
+        shortNumber = (short) doubleNumber; // Large to small (Explicit-narrowing)
 
-        System.out.println(sayiByte);
-        System.out.println(sayiShort);
-
+        System.out.println(byteNumber);
+        System.out.println(shortNumber);
     }
 }
