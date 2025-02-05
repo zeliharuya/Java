@@ -3,16 +3,17 @@ package day02_dataCasting;
 import java.util.Scanner;
 
 public class C05_Scanner {
-    public static void min (String[] args) {
-        //Soru 4- Kullanicidan bir dikdortgenin 2 kenar uzunlugunu alip, dikdortgenin alanini yazdirin
+    public static void main(String[] args) {
+        // Question 4: Get the lengths of two sides of a rectangle from the user and print its area.
 
-        Scanner scan= new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
-        System.out.println("Dikdörtgenin iki kere uzunlugunu girin /nbirinci kenar girdikten sonra enter'a basin");
-        double kenar1= scan.nextDouble();
-        double kenar2= scan.nextDouble();
+        System.out.println("Enter the two side lengths of the rectangle.\n" +
+                           "Press Enter after entering the first side:");
+        
+        double side1 = scan.nextDouble();
+        double side2 = scan.nextDouble();
 
-        System.out.println("-dikdörtgenin alani : " + kenar1*kenar2);
-
+        System.out.println("The area of the rectangle is: " + (side1 * side2));
     }
 }
