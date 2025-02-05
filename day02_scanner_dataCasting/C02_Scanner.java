@@ -3,25 +3,27 @@ package day02_scanner_dataCasting;
 import java.util.Scanner;
 
 public class C02_Scanner  {
-    /*/* Scanner kullanabilmek icin 3 adim
-        1 scanner i kullanmak istedigimiz class'da  kere scanner objesi olusturmaliyiz
-        Scanner scan = new Scanner(System.in)
-        2 kullanciya ne istedigimize dair bilgi vermeliyiz.
-        3 alacagimiz datayi iine koyabilecegimiy bir variable olusturup, scanner class'indeki hazir method'larla
-        kullanicidan istedigimiz bilgiyi almaliyiz.
-         */
+    /* Steps to use Scanner:
+        1. We must create a Scanner object once in the class where we want to use it.
+           Scanner scan = new Scanner(System.in);
+        2. We must inform the user about what we want to receive as input.
+        3. We must create a variable where we can store the data we will receive,
+           and use the ready-made methods in the Scanner class to get the input from the user.
+    */
 
     public static void main (String[] args) {
-    /* birinci adim scanner obeji olusturma */
+    /* Step 1: Create a Scanner object */
         Scanner scan = new Scanner(System.in);
-        // ikinci kullanicidan ne istedigimizi kullaniciya söyleyelim
-        System.out.println("Lütfen bir tamsayi giriniz");
-        /* 3. adim: istedigimiz datayi koyabilecegimiz bir variable olusturup kullanicinin
-        girdigi degeri uygun method'la alalim ve
-        olusturdugumuz variable'a atayalim.
-         */
+        
+        // Step 2: Inform the user about the expected input
+        System.out.println("Please enter an integer:");
 
-        int girilenSayi= scan.nextInt();
-        System.out.println("Girdiginiz sayinin kupu : " + (girilenSayi)*girilenSayi*girilenSayi);
+        /* Step 3: Create a variable to store the input data, 
+           retrieve the value from the user using the appropriate method, 
+           and assign it to the variable.
+        */
+
+        int enteredNumber = scan.nextInt();
+        System.out.println("The cube of the number you entered: " + (enteredNumber * enteredNumber * enteredNumber));
     }
 }
