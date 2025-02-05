@@ -15,7 +15,7 @@ public class day01_variables {
         /* The Java system cannot identify an object without it being defined.
          */
     }
-    /* There are 8 primitive data types: boolean, ??????????
+    /* There are 8 primitive data types: boolean, char, byte, int, short, long, float, and double.
     boolean can only have true or false as a value without any additional symbols like ' '.
 
      */
