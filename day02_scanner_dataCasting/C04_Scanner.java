@@ -4,37 +4,40 @@ import java.util.Scanner;
 
 public class C04_Scanner {
     public static void main (String[] args)  {
-        /*Soru 3- Kullanicidan ismini, soyismini ve yasini alip, asagidaki formmatta yazdirin.
-Isminiz : John
-Soyisminiz : Doe
-Yasiniz : 44
-Kaydiniz basariyla tamamlanmistir. */
-//Scanner java'da kullanicilardan bilgi alabilmek icin java.util kütüphanesinden Scanner class'ini kullaniriz.
+        /* Question 3: 
+           Get the user's first name, last name, and age, then print them in the following format:
+           
+           Name: John  
+           Surname: Doe  
+           Age: 44  
+           Your registration has been successfully completed.
+        */
 
+        // In Java, to receive input from users, we use the Scanner class from the java.util library.
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("isminizi giriniz");
+        System.out.println("Please enter your first name:");
+        String firstName = scan.nextLine();
 
-        String isim=scan.nextLine();
+        System.out.println("Please enter your last name:");
+        String lastName = scan.nextLine();
 
-        System.out.println("lütfen soyisminizi giriniz");
-        String soyisim=scan.nextLine();
+        System.out.println("Please enter your age:");
+        String age = scan.nextLine();
 
-        System.out.println("lütfen yasinizi giriniz");
-        String yas= scan.nextLine();
-
-        System.out.println("isminiz: " + isim + "\nSoyisminiz: " + soyisim + "\nYasiniz: " + yas );
+        System.out.println("Name: " + firstName + "\nSurname: " + lastName + "\nAge: " + age);
+        
         /*
-        String ile scan.next() ve scan.nextLine() kullanilabilir.
-        next() sadece ilk space'e kadar olan kismi alirken
-        nextLine() tüm satiri alir
+        In Java, both scan.next() and scan.nextLine() can be used for Strings.
+        - next() only takes the part before the first space.
+        - nextLine() takes the entire line.
 
-        Arka arkaya birden fazla String degeri kullanicidan alinacaksa hata olmamasi
-        icn nextLine() kullanilmasi daha iiyi olur.
+        If multiple String values are to be taken consecutively from the user, 
+        using nextLine() is better to avoid issues.
 
-        + satirlarin önemi yoktur ve mesela parantezlerin bitimine kadar dogru sayar.
-         */
-
+        + The order of the lines does not matter, 
+          for example, it correctly processes until the closing parentheses.
+        */
     }
 }
