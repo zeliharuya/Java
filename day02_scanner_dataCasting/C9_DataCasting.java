@@ -1,17 +1,20 @@
 package day02_scanner_dataCasting;
 
-public class C9_DataCasting {
+public class C09_DataCasting {
     public static void main(String[] args) {
 
-        int intSayi=200;
+        int intNumber = 200;
 
-        byte byteSayi = (byte)intSayi;
-        System.out.println("intsayi : " + intSayi + "'yi byte'a cevirirsek degeri : " + byteSayi);//116
+        byte byteNumber = (byte) intNumber; // Explicit narrowing (possible data loss)
+        System.out.println("If we convert intNumber: " + intNumber + " to byte, its value becomes: " + byteNumber); // 116
+
         /*
-        1- eger kücük data türündeki datayi, büyük data türündeki variable'a atama yaparsak otomatik genisler
-        2- eger büyül data türündeki datayi, küccük data rüründeki variable'a atama yaparsask,
-        Java islemi otomatik yapmaz, bizden sorumlulugu ister
-        data kaybi (ondalikli kismin gitmesi) veya dönüsüm olabilir.
-         */
+        1- If we assign a smaller data type to a larger data type variable, Java automatically widens it.
+        2- If we assign a larger data type to a smaller data type variable, 
+           Java does not perform the conversion automatically and requires us to take responsibility.
+           - This can lead to data loss (e.g., decimal parts being removed).
+           - Or, unexpected transformations may occur due to overflow.
+        */
     }
 }
+
