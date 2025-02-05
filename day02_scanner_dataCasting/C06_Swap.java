@@ -1,29 +1,26 @@
 package day02_scanner_dataCasting;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Scanner;
 
 public class C06_Swap {
     public static void main(String[] args) {
-        //Soru 7 (Interview)- Kullanicidan iki sayi alip ikisinin degerlerini degistirin(swap)
+        // Question 7 (Interview) - Get two numbers from the user and swap their values.
 
         Scanner scan = new Scanner(System.in);
 
-        int sayi1 = scan.nextInt();
-        System.out.println("lütfen 2. tamsayiyi giriniz");
-        int sayi2 = scan.nextInt();
+        System.out.println("Please enter the first integer:");
+        int number1 = scan.nextInt();
 
+        System.out.println("Please enter the second integer:");
+        int number2 = scan.nextInt();
 
-        System.out.println("Girilen degerler sayi1: " + sayi1 + "sayi2: " + sayi2);
+        System.out.println("Before swapping - number1: " + number1 + ", number2: " + number2);
 
-        int sayi3;
+        // Swap logic using a temporary variable
+        int temp = number2;
+        number2 = number1;
+        number1 = temp;
 
-        sayi3 = sayi2;
-
-        sayi2 = sayi1;
-
-        sayi1 = sayi3;
-        System.out.println("Degisimden sona degerler sayi1: " + sayi1 + "sayi2: " + sayi2);
+        System.out.println("After swapping - number1: " + number1 + ", number2: " + number2);
     }
 }
