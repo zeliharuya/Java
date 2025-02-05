@@ -3,26 +3,24 @@ package day02_scanner_dataCasting;
 public class C08_DataCasting {
     public static void main(String[] args) {
 
-        double doubleSayi=23.4;
+        double doubleNumber = 23.4;
 
-        int intSayi= (int)doubleSayi;
-        System.out.println(intSayi); //23
+        int intNumber = (int) doubleNumber; // Explicit narrowing (data loss occurs)
+        System.out.println(intNumber); // 23
 
-        //verilen 3 tamsayinin, ortalamasini yazdirin
+        // Print the average of three integers
 
-        int sayi1=12;
-        int sayi2=13;
-        int sayi3=16;
+        int number1 = 12;
+        int number2 = 13;
+        int number3 = 16;
 
-        System.out.println((sayi1+sayi2+sayi3)/3); //41/3 = 13.66666 =>13
+        System.out.println((number1 + number2 + number3) / 3); // 41 / 3 = 13.6666 => 13
         /*
-        Eger islem yapilan bütün sayilar int ise java soncu da integer olarak verir.
-        ama sayilardan biri double olursa, sonucu genis olana otomatik casr eder
-         */
-        double sayi4=15;
-        System.out.println((double)(sayi1+sayi2+sayi3)/3);
+        If all numbers in the calculation are integers, Java provides the result as an integer.
+        However, if one of the numbers is a double, Java automatically casts the result to the wider data type (double).
+        */
 
-        System.out.println((double)(sayi1+sayi2+sayi3)/3);
-
+        double number4 = 15;
+        System.out.println((double) (number1 + number2 + number3) / 3); // 13.6666
     }
 }
